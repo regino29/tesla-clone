@@ -40,6 +40,7 @@ const Wrap = styled.div`
 const ItemText = styled.div`
   padding-top: 15vh;
   text-align: center;
+  z-index:-1;
 `
 
 const ButtonGroup = styled.div`
@@ -79,4 +80,6 @@ const DownArrow = styled.img`
   overflow-x: hidden;
 `
 
-const Buttons = styled.div``
+const Buttons = styled.div`
+text-align:center;
+`
