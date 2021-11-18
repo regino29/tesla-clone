@@ -12,7 +12,7 @@ function Home() {
         leftBtnText="Custom order"
         rightBtnText="Existing inventory"
       />
-      
+
       <Section
         title="Model Y"
         description="Order Online for Touchless Delivery"
@@ -57,7 +57,6 @@ function Home() {
         description=""
         backgroundImg="accessories.jpg"
         leftBtnText="Shop now"
-        
       />
     </Container>
   )

@@ -17,7 +17,7 @@ function Section(props) {
           )}
         </ButtonGroup>
 
-        <DownArrow src="/images/down-arrow.svg" />
+        <DownArrow src="images/down-arrow.svg" />
       </Buttons>
     </Wrap>
   )
@@ -40,7 +40,6 @@ const Wrap = styled.div`
 const ItemText = styled.div`
   padding-top: 15vh;
   text-align: center;
- 
 `
 
 const ButtonGroup = styled.div`
@@ -81,5 +80,5 @@ const DownArrow = styled.img`
 `
 
 const Buttons = styled.div`
-text-align:center;
+  text-align: center;
 `

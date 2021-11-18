@@ -2,39 +2,44 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import MenuIcon from '@material-ui/icons/Menu'
 import CloseIcon from '@material-ui/icons/Close'
-import {selectCars} from '../features/car/carSlice';
-import {useSelector} from 'react-redux';
+import { selectCars } from '../features/car/carSlice'
+import { useSelector } from 'react-redux'
 
 function Header() {
-
-
-    const [burger,setBurger]=useState(false);
-    const cars = useSelector(selectCars);
+  const [burger, setBurger] = useState(false)
+  const cars = useSelector(selectCars)
   return (
     <Container>
       <a>
         <img src="/images/logo.svg" alt="" />
       </a>
       <Menu>
-          {cars && cars.map((car,index)=>(
-               <a key={index} href="#">{car}</a>
+        {cars &&
+          cars.map((car, index) => (
+            <a key={index} href="#">
+              {car}
+            </a>
           ))}
-       
       </Menu>
 
       <RightMenu>
         <a href="#">Shop</a>
         <a href="#">Tesla Account</a>
-        <CustomMenu onClick={()=>setBurger(true)}/>
+        <CustomMenu onClick={() => setBurger(true)} />
       </RightMenu>
 
-      <BurgerNav show={burger} >
+      <BurgerNav show={burger}>
         <CloseWraper>
-          <CustomClose onClick={()=>setBurger(false)}/>
+          <CustomClose onClick={() => setBurger(false)} />
         </CloseWraper>
 
-        {cars && cars.map((car,index)=>(
-               <li key={index}><a key={index} href="#">{car}</a></li>
+        {cars &&
+          cars.map((car, index) => (
+            <li key={index}>
+              <a key={index} href="#">
+                {car}
+              </a>
+            </li>
           ))}
 
         <li>
@@ -125,8 +130,8 @@ const BurgerNav = styled.div`
   display: flex;
   flex-direction: column;
   text-align: start;
-  transform: ${props=>props.show?'translateX(0)': 'translateX(100%)'};
-  transition:transform 0.2s;
+  transform: ${(props) => (props.show ? 'translateX(0)' : 'translateX(100%)')};
+  transition: transform 0.2s;
 
   li {
     padding: 15px 0;
